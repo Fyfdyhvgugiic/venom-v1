@@ -8,10 +8,10 @@ import os
 from keep_alive import keep_alive
 keep_alive()
 # insert your Telegram bot token here
-bot = telebot.TeleBot('7543594921:AAEb0Qs9usGggKGl0Q-iZ-JimDzJhtv01e0')
+bot = telebot.TeleBot('7512930302:AAGATJMEJfoqQgQUDOerW0AzG1ruk5ZnXgI')
 
 # Admin user IDs
-admin_id = ["5894556386"]
+admin_id = ["5951921135"]
 
 # File to store allowed user IDs
 USER_FILE = "users.txt"
@@ -73,7 +73,7 @@ def clear_logs():
 
 # Function to record command logs
 def record_command_logs(user_id, command, target=None, port=None, time=None):
-    log_entry = f"UserID: {user_id} | Time: {datetime.datetime.now()} | Command: {command}"
+    log_entry = f"UserID: {user_id} | Time: {datetime.datetime.now()} | Command: {/bgmi}"
     if target:
         log_entry += f" | Target: {target}"
     if port:
